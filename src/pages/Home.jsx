@@ -15,7 +15,6 @@ function Home() {
         return;
       }
 
-      // 👇 This forces MetaMask to pop even if already unlocked
       await window.ethereum.request({
         method: 'wallet_requestPermissions',
         params: [{ eth_accounts: {} }],
@@ -30,7 +29,6 @@ function Home() {
         return;
       }
 
-      // Get current network
       const networkId = await window.ethereum.request({ method: 'net_version' });
 
       if (networkId !== '11155111') {
@@ -38,7 +36,6 @@ function Home() {
         return;
       }
 
-      // ✅ Save connected account in localStorage or state
       localStorage.setItem('walletAddress', accounts[0]);
 
       toast.success('Wallet connected successfully!');
@@ -56,10 +53,10 @@ function Home() {
   return (
     <Box className="home-container">
       <Typography variant="h4" gutterBottom>
-        Welcome to the Citizen Registry DApp
+        🪪 Welcome to the Citizen Registry DApp
       </Typography>
-      <Button variant="contained" color="primary" onClick={connectWallet}>
-        Connect Wallet
+      <Button className="wallet-button" onClick={connectWallet}>
+        🔐 Connect Wallet
       </Button>
     </Box>
   );

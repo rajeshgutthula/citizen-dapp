@@ -18,11 +18,6 @@ function Dashboard() {
         const web3 = new Web3(window.ethereum);
         const networkId = await web3.eth.net.getId();
 
-        // if (networkId !== 11155111) {
-        //   toast.error('Please switch to Sepolia Testnet in MetaMask.');
-        //   return;
-        // }
-
         const accounts = await web3.eth.getAccounts();
         if (!accounts || accounts.length === 0) {
           toast.error('No MetaMask account found. Please connect your wallet.');
@@ -44,11 +39,9 @@ function Dashboard() {
   return (
     <div className="dashboard-container">
       <Header />
+
       <div className="dashboard-toolbar">
         <h2>Citizen Records</h2>
-        <button onClick={toggleForm} className="add-btn">
-          {showForm ? 'Close Form' : 'Add New Citizen'}
-        </button>
       </div>
 
       {showForm && (
@@ -58,6 +51,10 @@ function Dashboard() {
       )}
 
       <CitizenList />
+
+      <button className="floating-add-btn" onClick={toggleForm}>
+        {showForm ? '✖ Close Form' : '➕ Add Citizen'}
+      </button>
     </div>
   );
 }
