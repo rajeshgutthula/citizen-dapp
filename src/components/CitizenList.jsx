@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Card, CardContent, Typography } from '@mui/material';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Typography } from '@mui/material';
 import '../styles/CitizenList.css';
 
 function CitizenList() {
@@ -11,20 +11,28 @@ function CitizenList() {
   }
 
   return (
-    <div className="citizen-grid">
-      {citizens.map((citizen) => (
-        <div key={citizen.id} className="citizen-card">
-          <Card className="mui-card">
-            <CardContent className="card-content">
-              <Typography variant="h6" gutterBottom>{citizen.name}</Typography>
-              <Typography gutterBottom>Age: {citizen.age}</Typography>
-              <Typography gutterBottom>City:{citizen.city}</Typography>
-              <Typography>Note: {citizen.someNote}</Typography>
-            </CardContent>
-          </Card>
-        </div>
-      ))}
-    </div>
+    <TableContainer component={Paper} className="citizen-table">
+      <Table aria-label="citizen table">
+        <TableHead>
+          <TableRow>
+            <TableCell><strong>Name</strong></TableCell>
+            <TableCell><strong>Age</strong></TableCell>
+            <TableCell><strong>City</strong></TableCell>
+            <TableCell><strong>Note</strong></TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {citizens.map((citizen) => (
+            <TableRow key={citizen.id}>
+              <TableCell>{citizen.name}</TableCell>
+              <TableCell>{citizen.age}</TableCell>
+              <TableCell>{citizen.city}</TableCell>
+              <TableCell>{citizen.someNote}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
   );
 }
 
