@@ -1,0 +1,23 @@
+.add-citizen-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 30px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.add-citizen-form .MuiTextField-root {
+  background-color: white;
+}
+
+.add-citizen-form button {
+  background-color: var(--accent-color);
+  color: white;
+  font-weight: bold;
+}
+
+.add-citizen-form button:hover {
+  background-color: var(--button-hover-color);
+}
