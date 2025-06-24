@@ -27,7 +27,6 @@ The app uses **MetaMask** for transaction signing and **Alchemy RPC** for queryi
 | Web3       | Web3.js                         |
 | State Mgmt | Redux Toolkit                   |
 | Blockchain | Ethereum (Sepolia Testnet)      |
-| RPC Node   | Alchemy                         |
 | Wallet     | MetaMask                        |
 | Contract   | Deployed Solidity Smart Contract|
 
@@ -37,13 +36,21 @@ The app uses **MetaMask** for transaction signing and **Alchemy RPC** for queryi
 
 src/
 │
+
 ├── components/ # Reusable React UI components
+
 ├── pages/ # Page-level components (Dashboard, CreateCitizen)
+
 ├── redux/ # Redux slices (citizenSlice.js)
+
 ├── utils/ # Blockchain utilities (web3.js, abi.json)
+
 ├── App.jsx # Main React component
+
 ├── main.jsx # Entry point
+
 ├── styles/ # Global styles
+
 └── index.html
 
 Connect MetaMask (ensure Sepolia network is selected)
