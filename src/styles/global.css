@@ -33,7 +33,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Ensure React root container takes full height */
+
 #root {
   min-height: 100%;
   position: relative;

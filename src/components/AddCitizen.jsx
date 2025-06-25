@@ -22,7 +22,7 @@ function AddCitizen() {
     }
 
     try {
-      setLoading(true); // ✅ Show loader
+      setLoading(true); 
       await dispatch(
         addCitizen({
           name: form.name,
@@ -32,13 +32,12 @@ function AddCitizen() {
         })
       ).unwrap();
 
-      // toast.success('✅ Citizen added successfully!');
       setForm({ name: '', age: '', city: '', someNote: '' });
     } catch (err) {
       console.error('Add Citizen Error:', err);
       toast.error('🚫 Failed to add citizen.');
     } finally {
-      setLoading(false); // ✅ Hide loader
+      setLoading(false);
     }
   };
 
