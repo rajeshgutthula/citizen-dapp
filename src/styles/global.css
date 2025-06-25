@@ -2,9 +2,17 @@
   --primary-color: #7b2cbf;
   --secondary-color: #9d4edd;
   --accent-color: #f72585;
+  --accent-dark: #0f3460;
+  --hover-purple: #533483;
+  --btn-primary: #1976d2;
+  --btn-primary-hover: #125aa2;
   --background-color: #f3f0ff;
+  --bg-dark: #1a1a2e;
+  --bg-dark-alt: #16213e;
   --text-color: #333;
+  --text-dark: #333;
   --button-hover-color: #7209b7;
+  --shadow-soft: rgba(0, 0, 0, 0.2);
 }
 
 * {
@@ -13,7 +21,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   background-color: var(--background-color);
   font-family: 'Segoe UI', sans-serif;
   height: 100%;

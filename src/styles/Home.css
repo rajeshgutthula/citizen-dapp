@@ -1,8 +1,8 @@
 :root {
-  --primary-color: #1a1a2e;
-  --secondary-color: #16213e;
-  --accent-color: #0f3460;
-  --button-hover-color: #533483;
+  --primary-color: var(--bg-dark);
+  --secondary-color: var(--bg-dark-alt);
+  --accent-color: var(--accent-dark);
+  --button-hover-color: var(--hover-purple);
 }
 
 .home-container {
@@ -11,7 +11,7 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: linear-gradient(-45deg, #1a1a2e, #16213e, #0f3460, #533483);
+  background: linear-gradient(-45deg, var(--bg-dark), var(--bg-dark-alt), var(--accent-dark), var(--hover-purple));
   background-size: 400% 400%;
   animation: gradientBG 10s ease infinite;
   color: white;
